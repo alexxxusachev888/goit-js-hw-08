@@ -22,7 +22,7 @@ function onFormPrint(event) {
 function onSubmitForm(event) {
   event.preventDefault();
 
-  console.log(`Email: ${localData.email}; Message: ${localData.message}`);
+  console.log(JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)));
 
   event.target.reset();
   localStorage.removeItem(LOCALSTORAGE_KEY);
