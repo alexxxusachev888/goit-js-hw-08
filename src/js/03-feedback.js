@@ -21,6 +21,9 @@ function onFormPrint(event) {
 
 function onSubmitForm(event) {
   event.preventDefault();
+
+  console.log(`Email: ${localData.email}; Message: ${localData.message}`);
+
   event.target.reset();
   localStorage.removeItem(LOCALSTORAGE_KEY);
 }
